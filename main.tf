@@ -1,6 +1,7 @@
 #locals {
 #  settings = yamldecode(file("values.yaml"))
 #}
+#testing for code
 module "data_ec2_instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
