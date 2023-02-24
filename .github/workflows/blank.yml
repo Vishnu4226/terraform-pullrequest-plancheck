@@ -14,8 +14,9 @@ jobs:
       - uses: hashicorp/setup-terraform@v1
         with:
           terraform_wrapper: false
-
+      - run: terraform lint
+      - run: terraform fmt
       - run: terraform init
-      - run: terraform plan -lock=false -out terraform.plan
+     # - run: terraform plan -lock=false -out terraform.plan
        # generate json output
       - run: terraform show -json terraform.plan > terraform.json
