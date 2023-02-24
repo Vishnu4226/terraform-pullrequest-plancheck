@@ -1,5 +1,4 @@
 name: CI
-
 on:
   pull_request:
 jobs:
@@ -19,3 +18,5 @@ jobs:
         tflint_version: v0.44.1
     - name: Init TFLint
       run: tflint
+    - name: terraform fmt
+      run: terraform fmt
