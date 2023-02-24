@@ -1,5 +1,9 @@
-provider "aws" {
-  region     = "us-east-1"
- # access_key = "AKIAXVYQPHFK7HCELZ2J"
- # secret_key = "EjdXsCPA95tOJwRVKMIAs+7F9QTV3a6nDr8V1g"
-}
+terraform {
+  required_version = "0.13.0"
+
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "~> 3"
+    }
+  }
