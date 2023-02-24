@@ -19,10 +19,3 @@ jobs:
       - run: terraform plan -lock=false -out terraform.plan
        # generate json output
       - run: terraform show -json terraform.plan > terraform.json
-
-      - uses: ahmadnassri/action-terraform-report@v3
-        with:
-          # tell the action the plan outputs
-          terraform-text: ${{ github.workspace }}/terraform.text
-          terraform-json: ${{ github.workspace }}/terraform.json
-          remove-stale-reports: true
